@@ -1,4 +1,4 @@
-package com.ascendcorp.snspushnotification;
+package com.ascendcorp.pushnotification;
 
 public class ResponseObject {
 
