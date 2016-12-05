@@ -1,12 +1,5 @@
 package com.ascendcorp.pushnotification;
 
-import java.io.Serializable;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-
-
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class RequestObject{
 	
 	@Override
@@ -14,9 +7,7 @@ public class RequestObject{
 		return "RequestObject [phone=" + phone + ", textMessage=" + textMessage + "]";
 	}
 	
-	@JsonProperty("phone")
 	String phone;
-	@JsonProperty("textMessage")
 	String textMessage;
 	
 	public RequestObject() {
