@@ -81,7 +81,7 @@ public class LambdaFunctionHandler implements RequestHandler<RequestObject, Stri
         	  + "\"to\": \""+device_id+"\","
         	  + "\"notification\": {"
         	  + "\"title\": \"True Money Wallet\","
-        	  + "\"text\": \"."+input.getTextMessage()+".\","
+        	  + "\"text\": \""+input.getTextMessage()+"\","
         	  + "\"sound\": \"default\","
         	  + "\"badge\": \"1\","
         	  + "\"click_action\": \"OPEN_ACTIVITY_1\""
