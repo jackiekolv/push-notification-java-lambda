@@ -29,7 +29,7 @@ public class LambdaFunctionHandler implements RequestHandler<RequestObject, Stri
 			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
 			conn = DriverManager.getConnection(connectionString);
 		} catch (Exception e1) {
-			// TODO Auto-generated catch block
+			// TODO Auto-generated catch block 
 			e1.printStackTrace();
 		}
 	    
