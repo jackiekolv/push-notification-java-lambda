@@ -96,7 +96,7 @@ public class LambdaFunctionHandler implements RequestHandler<RequestObject, Stri
         String result = restTemplate.postForObject(fcm_endpoint, entity, String.class);
         System.out.println("Result : "+result);
     	
-        return "SUCCESS";
+        return result;
     }
     
     public static void main(String[] args) {
