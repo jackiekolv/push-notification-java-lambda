@@ -14,9 +14,9 @@ import org.springframework.web.client.RestTemplate;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 
-public class LambdaFunctionHandler implements RequestHandler<RequestObject, String> {
+public class LambdaFunctionHandler implements RequestHandler<RequestObject, Object> {
 
-    public String handleRequest(RequestObject input, Context context) {
+    public Object handleRequest(RequestObject input, Context context) {
     	System.out.println("Input: " + input);
     	
     	Connection conn = null;
@@ -93,7 +93,7 @@ public class LambdaFunctionHandler implements RequestHandler<RequestObject, Stri
         headers.set("Authorization", "key="+fcm_api_key);
         HttpEntity<String> entity = new HttpEntity<String>(payload,headers);
         System.out.println(payload);
-        String result = restTemplate.postForObject(fcm_endpoint, entity, String.class);
+        Object result = restTemplate.postForObject(fcm_endpoint, entity, Object.class);
         System.out.println("Result : "+result);
     	
         return result;
